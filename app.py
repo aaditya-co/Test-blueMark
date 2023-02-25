@@ -23,3 +23,7 @@ updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CommandHandler('download', download_song))
 updater.start_polling()
 updater.idle()
+
+
+if __name__ == "__main__":
+    socketio.run(app)
