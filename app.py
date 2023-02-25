@@ -18,7 +18,7 @@ def download_song(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Downloading {}...".format(song_name))
     context.bot.send_audio(chat_id=update.effective_chat.id, audio=download_url)
 
-updater = Updater('6183906442:AAE6PduZy5Ppemwy0lWRf5Y8b_XZFHgvWek', use_context=True)
+updater = Updater('6183906442:AAE6PduZy5Ppemwy0lWRf5Y8b_XZFHgvWek')
 updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CommandHandler('download', download_song))
 updater.start_polling()
